@@ -1,13 +1,273 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#555555, #2a2a2a);
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.home-div {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
-*/
+p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.p1 {
+    margin: 0;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.p2 {
+    margin: 0;
+    color: #b3b3b3;
+    font-size: 0.7rem;
+}
+
+.p3 {
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-bottom: 0.3rem;
+}
+
+.heart-icon-class {
+    color: #C3C3C3;
+}
+
+.green-icon-class {
+    color: #65d36e;
+}
+
+.button-class {
+    color: #65d36e;
+    margin: 1rem;
+}
+
+button {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-right {
+    margin-left: auto;
+}
+
+.icon-left {
+    margin-left: 0.5rem;
+}
+
+.icon-top {
+    padding-top: 0.7rem;
+}
+
+.player-class {
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #121212;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    border-top: 0.1rem solid #535353;
+    box-shadow: 0 4px 5px -2px rgba(0, 0, 0, .7);
+}
+
+header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    background-color: #121212;
+}
+
+header:hover {
+    background-color: #2a2a2a;
+}
+
+header:active {
+    background-color: #5a5a5a;
+}
+
+.album-cover-div {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    width: 20rem;
+    height: 19rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#905663, #342428);
+}
+
+.album-info-div {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
+    width: 20rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(#342428, #121212);
+}
+
+img {
+    width: 14rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .7);
+}
+
+.btn {
+    padding: 0;
+}
+
+.dropdown-menu {
+    background-color: #282828;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.dropdown-item {
+    color: white;
+    padding-left: 0.9rem;
+    padding-right: 0;
+}
+
+.dropdown-item:hover {
+    color: white;
+    background-color: #3e3e3e;
+  }
+
+  .audio-player {
+    height: 50px;
+    width: 350px;
+    background: #444;
+    box-shadow: 0 0 20px 0 #000a;
+    font-family: arial;
+    color: white;
+    font-size: 0.75em;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 6px auto;
+  }
+  .audio-player .timeline {
+    background: white;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 2px 10px 0 #0008;
+  }
+  .audio-player .timeline .progress {
+    background: coral;
+    width: 0%;
+    height: 100%;
+    transition: 0.25s;
+  }
+  .audio-player .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 20px;
+  }
+  .audio-player .controls > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .audio-player .controls .toggle-play.play {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid #0000;
+    border-left: 13px solid white;
+  }
+  .audio-player .controls .toggle-play.play:hover {
+    transform: scale(1.1);
+  }
+  .audio-player .controls .toggle-play.pause {
+    height: 15px;
+    width: 20px;
+    cursor: pointer;
+    position: relative;
+  }
+  .audio-player .controls .toggle-play.pause:before {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    background: white;
+    content: "";
+    height: 15px;
+    width: 3px;
+  }
+  .audio-player .controls .toggle-play.pause:after {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    background: white;
+    content: "";
+    height: 15px;
+    width: 3px;
+  }
+  .audio-player .controls .toggle-play.pause:hover {
+    transform: scale(1.1);
+  }
+  .audio-player .controls .time {
+    display: flex;
+  }
+  .audio-player .controls .time > * {
+    padding: 2px;
+  }
+  .audio-player .controls .volume-container {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+  .audio-player .controls .volume-container .volume-button {
+    height: 26px;
+    display: flex;
+    align-items: center;
+  }
+  .audio-player .controls .volume-container .volume-button .volume {
+    transform: scale(0.7);
+  }
+  .audio-player .controls .volume-container .volume-slider {
+    position: absolute;
+    left: -3px;
+    top: 15px;
+    z-index: -1;
+    width: 0;
+    height: 15px;
+    background: white;
+    box-shadow: 0 0 20px #000a;
+    transition: 0.25s;
+  }
+  .audio-player .controls .volume-container .volume-slider .volume-percentage {
+    background: coral;
+    height: 100%;
+    width: 75%;
+  }
+  .audio-player .controls .volume-container:hover .volume-slider {
+    left: -123px;
+    width: 120px;
+  }

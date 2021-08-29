@@ -5,9 +5,12 @@ import PropTypes from "prop-types";
 
 const SongDiv = props => {
 	return (
-		<header onClick={() => props.chooseSong(props.positionFuncProp)}>
+		<header
+			onClick={() => {
+				props.play();
+			}}>
 			<div className="titles">
-				<span className="p1">{props.songName}</span>
+				<span className="p1 uppercase">{props.songName}</span>
 				<span className="p2">{props.artistName}</span>
 			</div>
 
@@ -45,8 +48,7 @@ const SongDiv = props => {
 SongDiv.propTypes = {
 	songName: PropTypes.string,
 	artistName: PropTypes.string,
-	chooseSong: PropTypes.func,
-	positionFuncProp: PropTypes.number
+	play: PropTypes.func
 };
 
 export default SongDiv;
